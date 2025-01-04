@@ -3,99 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irene es piuta</title>
-    <!-- Estilos -->
+    <title>Gala Sigma</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #6a0dad;
             color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        main {
             padding: 20px;
             text-align: center;
         }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, blockquote {
+            color: #6a0dad;
+        }
+        ul, p {
+            margin: 15px 0;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #5a0cab;
+        }
         footer {
+            text-align: center;
+            padding: 10px;
             background-color: #333;
             color: white;
+        }
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Encabezado -->
     <header>
-        <h1>Bienvenido a Mi Página Web</h1>
-        <p>Las mujeres son malas</p>
+        <h1>Bienvenidos a la Gala Sigma</h1>
+        <p>¡El evento donde nos reunimos para celebrar y disfrutar juntos!</p>
     </header>
+    <div class="container">
+        <h2>Detalles del evento</h2>
+        <ul>
+            <li><strong>Fecha:</strong> 30 de diciembre</li>
+            <li><strong>Hora:</strong> Comienza cuando Félix sale de trabajar</li>
+            <li><strong>Lugar:</strong> La nave de Virolo</li>
+            <li><strong>Código de vestimenta:</strong> Formal</li>
+        </ul>
 
-    <!-- Menú de navegación -->
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+        <h2>¡Faltan para la Gala Sigma!</h2>
+        <div id="countdown"></div>
+        <script>
+            const eventDate = new Date("December 30, 2025 00:00:00").getTime();
+            const countdown = document.getElementById("countdown");
 
-    <!-- Contenido principal -->
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Esta es una página básica creada con HTML. ¡Puedes personalizarla a tu gusto!</p>
-        </section>
+            setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = eventDate - now;
 
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos un equipo apasionado por la tecnología y la innovación.</p>
-        </section>
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <ul>
-                <li>Desarrollo Web</li>
-                <li>Diseño Gráfico</li>
-                <li>Consultoría Digital</li>
-            </ul>
-        </section>
+                countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        </script>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Email: contacto@mipaginaweb.com</p>
-            <p>Teléfono: +34 123 456 789</p>
-        </section>
-    </main>
+        <h2>Amigo Invisible</h2>
+        <p>Este año, el sorteo del amigo invisible incluye a los siguientes miembros:</p>
+        <ul>
+            <li>Halberch</li>
+            <li>Antuan</li>
+            <li>Virolo</li>
+            <li>Josema</li>
+            <li>Lancer</li>
+            <li>Visu</li>
+            <li>Pablo</li>
+            <li>Juanma</li>
+        </ul>
+        <p>No hay presupuesto establecido, pero recuerda traer tu regalo envuelto y etiquetado con el nombre de tu amigo invisible.</p>
 
-    <!-- Pie de página -->
+        <h2>Recuerdos de años anteriores</h2>
+        <div class="gallery">
+            <img src="foto1.jpg" alt="Gala Sigma 2024">
+        </div>
+
+        <h2>¿Tienes sugerencias?</h2>
+        <form action="#" method="post">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="suggestion">Tu sugerencia:</label>
+            <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <h2>Playlist Oficial</h2>
+        <p>¡Disfruta de nuestra música antes del evento!</p>
+        <a href="https://open.spotify.com/playlist/4RQuSKBDE7wBWw80OT8AZY?si=9e11e31c45df4b85" target="_blank">Escuchar en Spotify</a>
+
+        <h2>Actividades durante la Gala</h2>
+        <ul>
+            <li>Presentación del amigo invisible</li>
+            <li>Competencia de karaoke</li>
+            <li>Juego de preguntas Sigma</li>
+        </ul>
+
+        <blockquote>
+            "La amistad es la clave de nuestras reuniones, y la Gala Sigma es nuestro momento más especial."
+        </blockquote>
+
+        <h2>La Historia de la Gala Sigma</h2>
+        <p>La Gala Sigma comenzó en 2022 como una idea entre amigos para celebrar el fin de año y compartir momentos inolvidables. Desde entonces, hemos mantenido la tradición del amigo invisible, agregando cada vez más diversión y sorpresas a nuestro evento anual.</p>
+    </div>
     <footer>
-        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Gala Sigma. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
