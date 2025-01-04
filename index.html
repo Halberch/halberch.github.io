@@ -1,157 +1,460 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gala Sigma</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #6a0dad;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, blockquote {
-            color: #6a0dad;
-        }
-        ul, p {
-            margin: 15px 0;
-        }
-        .gallery img {
-            width: 30%;
-            margin: 10px;
-            border-radius: 8px;
-        }
-        form {
-            margin-top: 20px;
-        }
-        form input, form textarea, form button {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        .btn {
-            background-color: #6a0dad;
-            color: white;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-        }
-        .btn:hover {
-            background-color: #5a0cab;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-        #countdown {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-	<header>
-		<h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 10px; color: white">La Gran Gala Sigma</h1>
-		<p>¡El evento donde nos reunimos para celebrar y disfrutar juntos!</p>
-	</header>
-    <div class="container">
-        <h2>Detalles del evento</h2>
-        <ul>
-            <li><strong>Fecha:</strong> 30 de diciembre</li>
-            <li><strong>Hora:</strong> Comienza cuando Félix sale de trabajar</li>
-            <li><strong>Lugar:</strong> La nave de Virolo</li>
-            <li><strong>Código de vestimenta:</strong> Formal</li>
-        </ul>
+<!doctype html>
 
-        <h2>¡Faltan para la Gala Sigma!</h2>
-        <div id="countdown"></div>
-        <script>
-            const eventDate = new Date("December 30, 2025 00:00:00").getTime();
-            const countdown = document.getElementById("countdown");
+<html lang="en">
+   
+   
+    <head>
+       
+       
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noodp">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+       
+        <!-- PAGE TITLE -->
+        <title>Miller - Identity</title>
+       
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+       
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CArapey&amp;subset=latin-ext" rel="stylesheet">
+       
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        
+        
+    </head>
 
-            setInterval(() => {
-                const now = new Date().getTime();
-                const timeLeft = eventDate - now;
-
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }, 1000);
-        </script>
-
-        <h2>Amigo Invisible</h2>
-        <p>Este año, el sorteo del amigo invisible incluye a los siguientes miembros:</p>
-        <ul>
-            <li>Halberch</li>
-            <li>Antuan</li>
-            <li>Virolo</li>
-            <li>Josema</li>
-            <li>Lancer</li>
-            <li>Visu</li>
-            <li>Pablo</li>
-            <li>Juanma</li>
-        </ul>
-        <p>No hay presupuesto establecido, pero recuerda traer tu regalo envuelto y etiquetado con el nombre de tu amigo invisible.</p>
-
-        <h2>Recuerdos de años anteriores</h2>
-        <div class="gallery">
-            <img src="foto1.jpg" alt="Gala Sigma 2024">
+   
+    <body>
+    
+       
+        <!-- PRELOADER -->
+        <div class="preloader">
+           
+            <div class="spinner"></div>
+            
         </div>
+        <!-- /PRELOADER -->
+    
+        
+        <!-- IMAGE CONTAINER -->
+        <div class="image-container">
+           
+            <div class="background-img"></div>
 
-        <h2>¿Tienes sugerencias?</h2>
-        <form action="#" method="post">
-            <label for="name">Tu nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="suggestion">Tu sugerencia:</label>
-            <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+        </div>
+        <!-- /IMAGE CONTAINER -->
 
-        <h2>Playlist Oficial</h2>
-        <p>¡Disfruta de nuestra música antes del evento!</p>
-        <a href="https://open.spotify.com/playlist/4RQuSKBDE7wBWw80OT8AZY?si=9e11e31c45df4b85" target="_blank">Escuchar en Spotify</a>
 
-        <h2>Actividades durante la Gala</h2>
-        <ul>
-            <li>Presentación del amigo invisible</li>
-            <li>Competencia de karaoke</li>
-            <li>Juego de preguntas Sigma</li>
-        </ul>
+        <!-- CONTENT AREA -->
+        <div class="content-area">
 
-        <blockquote>
-            "La amistad es la clave de nuestras reuniones, y la Gala Sigma es nuestro momento más especial."
-        </blockquote>
 
-        <h2>La Historia de la Gala Sigma</h2>
-        <p>La Gala Sigma comenzó en 2022 como una idea entre amigos para celebrar el fin de año y compartir momentos inolvidables. Desde entonces, hemos mantenido la tradición del amigo invisible, agregando cada vez más diversión y sorpresas a nuestro evento anual.</p>
-    </div>
-    <footer>
-        <p>&copy; 2025 Gala Sigma. Todos los derechos reservados.</p>
-    </footer>
-</body>
+            <!-- CONTENT AREA INNER --> 
+            <div class="content-area-inner">
+
+
+                <!-- INTRO -->
+                <section id="intro">
+
+
+                    <!-- CONTAINER MID -->
+                    <div class="container-mid">
+
+                       
+                        <!-- ANIMATION CONTAINER -->
+                        <div class="animation-container animation-fade-down" data-animation-delay="0">
+                        
+                            <h1>I’m John Miller,</h1>
+                        
+                        </div>
+                        <!-- /ANIMATION CONTAINER -->
+                        
+                        
+                        <!-- ANIMATION CONTAINER -->
+                        <div class="animation-container animation-fade-left" data-animation-delay="300">
+                           
+                            <p class="subline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lacinia molestie. Phasellus vehicula ornare odio, blandit commodo nisl dapibus vel. Sed vel fermentum elit.</p>
+                            
+                        </div>
+                        <!-- /ANIMATION CONTAINER -->
+                        
+                        
+                        <!-- ANIMATION CONTAINER -->
+                        <div class="animation-container animation-fade-up" data-animation-delay="600">
+                           
+                            <a href="#about" class="smooth-scroll">Learn More<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            
+                        </div>
+                        <!-- /ANIMATION CONTAINER -->
+
+
+                    </div>
+                    <!-- /CONTAINER MID -->
+
+
+                </section>
+                <!-- /INTRO -->
+
+
+                <!-- ABOUT -->
+                <section id="about">
+
+
+                    <h3 class="headline scroll-animated-from-right">Why I can help you.</h3>
+                    
+                    <p class="scroll-animated-from-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+
+                    <p class="scroll-animated-from-right">Duis consectetur massa sit amet nibh rhoncus, at pharetra ligula aliquet. Ut ac velit vestibulum, eleifend diam ut, malesuada nisi. Sed vel felis vitae diam luctus commodo. Nunc ipsum est, vulputate id orci ac, luctus consectetur sapien.</p>
+
+
+                </section>
+                <!-- /ABOUT -->
+                
+                
+                <!-- SERVICE -->
+                <section id="service">
+
+
+                    <h3 class="headline scroll-animated-from-right">What I can do for you.</h3>
+                    
+                    
+                    <!-- SERVICE LIST -->
+                    <ul class="services-list">
+                       
+                       
+                        <li class="scroll-animated-from-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Concept & Strategy</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-eye" aria-hidden="true"></i>Design Direction</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-database" aria-hidden="true"></i>Product Design</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-television" aria-hidden="true"></i>Web Design</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-square-o" aria-hidden="true"></i>UI & UX Design</li>
+                        
+                        
+                    </ul>
+                    <!-- /SERVICE LIST -->
+
+
+                </section>
+                <!-- /SERVICE -->
+                
+                
+                <!-- WORK -->
+                <section id="work">
+
+
+                    <h3 class="headline scroll-animated-from-right">My latest Work.</h3>
+                    
+                    
+                    <!-- SHOWCASE -->
+                    <div class="showcase">
+                       
+                       
+                        <!-- ITEM -->
+                        <div class="item scroll-animated-from-right">
+                          
+                          
+                            <!-- LIGHTBOX LINK -->
+                            <a href="#" data-featherlight="#item-1-lightbox">
+                            
+                            
+                                <!-- INFO -->
+                                <div class="info">
+
+
+                                    <!-- CONTAINER MID -->
+                                    <div class="container-mid">
+
+                                        <h5>Fashion Inc.</h5>
+                                        <p>Web Design</p>
+
+                                    </div>
+                                    <!-- /CONTAINER MID -->
+
+
+                                </div>
+                                <!-- /INFO -->
+
+
+                                <div class="background-image" style="background-image: url(assets/img/work/item-1.jpg)"></div>
+
+                           
+                            </a>
+                            <!-- /LIGHTBOX LINK -->
+                            
+                            
+                            <!-- LIGHTBOX -->
+                            <div id="item-1-lightbox" class="work-lightbox">
+                               
+                               
+                                <img class="img-responsive" src="assets/img/work/item-1.jpg" alt="image">
+                                
+                                <h3>Fashion Inc.</h3>
+                                <p class="subline">Web Design</p>
+                                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                
+                                
+                            </div>
+                            <!-- /LIGHTBOX -->
+                            
+                            
+                        </div>
+                        <!-- /ITEM -->
+                        
+                        
+                        <!-- ITEM -->
+                        <div class="item scroll-animated-from-right">
+                          
+                          
+                            <!-- LIGHTBOX LINK -->
+                            <a href="#" data-featherlight="#item-2-lightbox">
+                            
+                            
+                                <!-- INFO -->
+                                <div class="info">
+
+
+                                    <!-- CONTAINER MID -->
+                                    <div class="container-mid">
+
+                                        <h5>Asimov 71</h5>
+                                        <p>Product Design</p>
+
+                                    </div>
+                                    <!-- /CONTAINER MID -->
+
+
+                                </div>
+                                <!-- /INFO -->
+
+
+                                <div class="background-image" style="background-image: url(assets/img/work/item-2.jpg)"></div>
+
+                           
+                            </a>
+                            <!-- /LIGHTBOX LINK -->
+                            
+                            
+                            <!-- LIGHTBOX -->
+                            <div id="item-2-lightbox" class="work-lightbox">
+                               
+                               
+                                <img class="img-responsive" src="assets/img/work/item-2.jpg" alt="image">
+                                
+                                <h3>Asimov 71</h3>
+                                <p class="subline">Product Design</p>
+                                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                
+                                
+                            </div>
+                            <!-- /LIGHTBOX -->
+                            
+                            
+                        </div>
+                        <!-- /ITEM -->
+                        
+                        
+                        <!-- ITEM -->
+                        <div class="item scroll-animated-from-right">
+                          
+                          
+                            <!-- LIGHTBOX LINK -->
+                            <a href="#" data-featherlight="#item-3-lightbox">
+                            
+                            
+                                <!-- INFO -->
+                                <div class="info">
+
+
+                                    <!-- CONTAINER MID -->
+                                    <div class="container-mid">
+
+                                        <h5>Hardley &amp; Sons</h5>
+                                        <p>Design Direction</p>
+
+                                    </div>
+                                    <!-- /CONTAINER MID -->
+
+
+                                </div>
+                                <!-- /INFO -->
+
+
+                                <div class="background-image" style="background-image: url(assets/img/work/item-3.jpg)"></div>
+
+                           
+                            </a>
+                            <!-- /LIGHTBOX LINK -->
+                            
+                            
+                            <!-- LIGHTBOX -->
+                            <div id="item-3-lightbox" class="work-lightbox">
+                               
+                               
+                                <img class="img-responsive" src="assets/img/work/item-3.jpg" alt="image">
+                                
+                                <h3>Hardley &amp; Sons</h3>
+                                <p class="subline">Design Direction</p>
+                                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                
+                                
+                            </div>
+                            <!-- /LIGHTBOX -->
+                            
+                            
+                        </div>
+                        <!-- /ITEM -->
+                        
+                        
+                        <!-- ITEM -->
+                        <div class="item scroll-animated-from-right">
+                          
+                          
+                            <!-- LIGHTBOX LINK -->
+                            <a href="#" data-featherlight="#item-4-lightbox">
+                            
+                            
+                                <!-- INFO -->
+                                <div class="info">
+
+
+                                    <!-- CONTAINER MID -->
+                                    <div class="container-mid">
+
+                                        <h5>Starnation</h5>
+                                        <p>UI/UX DESIGN</p>
+
+                                    </div>
+                                    <!-- /CONTAINER MID -->
+
+
+                                </div>
+                                <!-- /INFO -->
+
+
+                                <div class="background-image" style="background-image: url(assets/img/work/item-4.jpg)"></div>
+
+                           
+                            </a>
+                            <!-- /LIGHTBOX LINK -->
+                            
+                            
+                            <!-- LIGHTBOX -->
+                            <div id="item-4-lightbox" class="work-lightbox">
+                               
+                               
+                                <img class="img-responsive" src="assets/img/work/item-4.jpg" alt="image">
+                                
+                                <h3>Starnation</h3>
+                                <p class="subline">UI/UX DESIGN</p>
+                                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                
+                                
+                            </div>
+                            <!-- /LIGHTBOX -->
+                            
+                            
+                        </div>
+                        <!-- /ITEM -->
+                        
+                        
+                    </div>
+                    <!-- /SHOWCASE -->
+
+
+                </section>
+                <!-- /WORK -->
+                
+                
+                <!-- CONTACT -->
+                <section id="contact">
+
+
+                    <h3 class="headline scroll-animated-from-right">Contact Me.</h3>
+                    
+                    
+                    <!-- CONTACT LIST -->
+                    <ul class="contact-list">
+                       
+                        <li class="scroll-animated-from-right"><i class="fa fa-mobile" aria-hidden="true"></i>01572 115522</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-envelope-o" aria-hidden="true"></i>johnmiller@mail.com</li>
+                        
+                    </ul>
+                    <!-- /CONTACT LIST -->
+                    
+                    
+                    <!-- CONTACT FORM --> 
+                    <form id="contact-form" action="assets/php/contact.php" method="post">
+
+                       
+                        <input id="contact-form-name" type="text" name="name" class="form-control scroll-animated-from-right" placeholder="* Your Name">
+                        
+                        <input id="contact-form-email" type="text" name="email" class="form-control scroll-animated-from-right" placeholder="* Your Email">
+                        
+                        <!-- PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
+                        <div class="fhp-input"><input id="contact-form-company" type="text" name="company" class="form-control"></div>
+                        <!-- /PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
+                        
+                        <textarea id="contact-form-message" name="message" class="form-control scroll-animated-from-right" placeholder="* Your Message"></textarea>
+                        
+                        <button type="submit" class="form-control scroll-animated-from-right">Send Mail</button>
+                        
+                        <div class="success-message">* The Email was Sent Successfully!</div>
+
+                   
+                    </form>
+                    <!-- /CONTACT FORM --> 
+
+
+                </section>
+                <!-- /CONTACT -->
+                
+                
+                <!-- FOOTER -->
+                <section id="footer">
+                
+                   
+                    <!-- SOCIAL ICONS -->
+                    <ul class="social-icons scroll-animated-from-right">
+                       
+                       
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        
+                        
+                    </ul>
+                    <!-- /SOCIAL ICONS -->
+                    
+
+                    <p class="scroll-animated-from-right">© 2017 Your Brand | Design by <a href="https://templatefoundation.com">Template Foundation</a></p>
+
+
+                </section>
+                <!-- /FOOTER -->
+
+
+            </div>
+            <!-- /CONTENT AREA INNER -->
+
+
+        </div>
+        <!-- /CONTENT AREA -->
+        
+        
+        <!-- JAVASCRIPTS -->
+        <script type="text/javascript" src="assets/js/plugins.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+   
+   
+    </body> 
+    
+    
 </html>
